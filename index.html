@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample</title>
+  <link href="css/drift-basic.css"/ rel="stylesheet">
+  <script src="js/Drift.js"></script>
+</head>
+<body>
+  <div class="header">Header</div>
+  <div class="main">
+    <h1>見出し</h1>
+    <p>コンテンツ</p>
+    <div class="examples">
+      <img class="photo" src="image/sample-small.png" data-zoom="image/sample-large.png">
+      <div class="detail"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <span>Footer領域</span>
+    <a href="#">リンク</a>
+  </div>
+  <script>
+    new Drift(document.querySelector('.photo'), {
+      paneContainer: document.querySelector('.detail'),
+      zoomFactor: 3,
+      inlinePane: 790,
+      inlineOffsetY: -85,
+      containInline: true
+    });
+  </script>
+</body>
+</html>
